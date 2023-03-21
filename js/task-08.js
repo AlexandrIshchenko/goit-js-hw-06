@@ -10,14 +10,14 @@ form.addEventListener("submit", event => {
     const {
         elements: { email, password},
     } = event.currentTarget;
-    if (email.value === "" && password.value === "") {
+    if (email.value === "" || password.value === "") {
         alert(message);
     }
     const emailUser = email.value;
     const passwordUser = password.value;
     const login = {
-        email: emailUser,
-        password: passwordUser,
+        emailUser,
+        passwordUser,
     };
 
     console.log(login);
